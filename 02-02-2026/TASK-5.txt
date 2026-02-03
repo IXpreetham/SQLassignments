@@ -1,0 +1,31 @@
+<TASK-5>
+
+SELECT count(*) from students;
+
+select count(*) from students where active_flag=1;
+
+select sum(fees) from courses;
+
+select avg(fees) from courses;
+
+select fees from courses group by fees having fees>2000;
+
+select min(age) from students;
+
+select max(fees) from courses;
+
+select max(registration_date) from students;
+
+select min(registration_date) from students;
+
+select active_flag,count(*) from students group by active_flag;
+
+select age,count(*) from students group by age;
+
+select fees,count(*) from courses group by fees;
+
+select course_id from enrollments group by course_id having count(*)>3;
+
+select age from students group by age having age>avg(age);
+
+select course_id,count(*) from enrollments group by course_id having count(*)>2;

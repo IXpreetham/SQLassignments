@@ -1,0 +1,27 @@
+<TASK4>
+
+select * from students where age>21;
+
+select * from students where active_flag='true';
+
+select * from courses where fees between 1000 and 5000;
+
+select * from students where age in (20,22,25);
+
+select * from students where age>20 and active_flag='true';
+
+select * from students where age<20 and active_flag='false';
+
+select * from courses where fees>2000 and course_name like '%M%';
+
+select * from students where email like '%gmail.com';
+
+select * from courses where course_name like 'data%';
+
+select * from students where names like '%new%';
+
+Insert into students values (1017,'nikhil','nikhil@gmail.com',NULL ,'2026-01-20',1,NULL);
+
+select * from students where age is NULL;
+
+select * from students where age is not NULL;

@@ -1,0 +1,40 @@
+Insert into students values (1011,'Shiva','shiva@gmail.com',64,'2026-02-02',1);
+Insert into students values (1012,'Laxman','laxman@gmail.com',55,'2026-02-02',1);
+Insert into students values (1013,'Hanuma','hanuma@gmail.com',33,'2026-02-02',0);
+
+Insert into courses values (105,'Mech',1932.45);
+
+Insert INTO enrollments VALUES (10016, 1011, 104, SYSDATETIME());
+
+select * from students;
+
+select names,email from students;
+
+select * from students order by age desc;
+
+SELECT TOP 5 * FROM students ORDER BY join_date DESC;
+
+select distinct age from students;
+
+select distinct course_name from courses;
+
+update students set age=27 where student_id=1001;
+
+update students set active_flag='false' where student_id in (1001,1003);
+
+update courses set fees+=0.1*fees;
+
+update enrollments set enroll_timestamp='2027-02-02 17:43:30.053' where course_id=100;
+
+
+delete  from students where student_id=1001;
+
+delete from courses where fees<1700;
+
+delete from enrollments where enroll_timestamp>'2026-03-01'; 
+
+alter table students alter column names varchar(60);
+
+EXEC sp_rename 'students.join_date', 'registration_date', 'COLUMN';
+
+alter table students add  phone_number varchar(15);
