@@ -1,0 +1,11 @@
+<Task -6>
+
+select * from students where age>20 order by age desc;
+
+select count(*) from students where names like '%a%';
+
+select course_id,course_name from courses where fees between 1000 and 5000 order by fees;
+
+select * from students where active_flag='true' and age is not null;
+
+select student_id,count(course_id) from enrollments group by student_id having count(course_id)>1;
